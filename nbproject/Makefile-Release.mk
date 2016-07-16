@@ -35,14 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/BowVector.o \
-	${OBJECTDIR}/Column.o \
-	${OBJECTDIR}/FBrief.o \
-	${OBJECTDIR}/FORB.o \
-	${OBJECTDIR}/FSurf64.o \
-	${OBJECTDIR}/FeatureVector.o \
-	${OBJECTDIR}/QueryResults.o \
-	${OBJECTDIR}/ScoringObject.o \
 	${OBJECTDIR}/main.o
 
 
@@ -69,46 +61,6 @@ LDLIBSOPTIONS=-L../../SDKs/opencv-2.4.13/build/lib -L../../SDKs/DLib-1.0/build -
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libVocTreePgLib.${CND_DLIB_EXT}: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	g++ -shared -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libVocTreePgLib.${CND_DLIB_EXT} ${OBJECTFILES} ${LDLIBSOPTIONS} -lpqxx -lpq -lopencv_core -lopencv_contrib -lopencv_features2d -lopencv_flann -lopencv_highgui -lopencv_objdetect -lopencv_video -lopencv_legacy -lopencv_calib3d -lopencv_imgproc -lopencv_ml -lopencv_nonfree -shared -fPIC
-
-${OBJECTDIR}/BowVector.o: BowVector.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BowVector.o BowVector.cpp
-
-${OBJECTDIR}/Column.o: Column.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Column.o Column.cpp
-
-${OBJECTDIR}/FBrief.o: FBrief.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FBrief.o FBrief.cpp
-
-${OBJECTDIR}/FORB.o: FORB.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FORB.o FORB.cpp
-
-${OBJECTDIR}/FSurf64.o: FSurf64.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FSurf64.o FSurf64.cpp
-
-${OBJECTDIR}/FeatureVector.o: FeatureVector.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FeatureVector.o FeatureVector.cpp
-
-${OBJECTDIR}/QueryResults.o: QueryResults.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/QueryResults.o QueryResults.cpp
-
-${OBJECTDIR}/ScoringObject.o: ScoringObject.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../../SDKs/DLib-1.0/include/DUtils -I../../SDKs/DLib-1.0/include/DUtilsCV -I../../SDKs/DLib-1.0/include/DVision -I../../SDKs/opencv-2.4.13/include/opencv -I../../SDKs/opencv-2.4.13/include/opencv2 -I../../SDKs/jdk1.8.0_92/include -I../../SDKs/jdk1.8.0_92/include/linux -std=c++11 -fPIC  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ScoringObject.o ScoringObject.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

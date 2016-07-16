@@ -4,16 +4,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Исходные файлы"
                    projectFiles="true">
-      <itemPath>BowVector.cpp</itemPath>
-      <itemPath>Column.cpp</itemPath>
-      <itemPath>DBoW2.cmake.in</itemPath>
-      <itemPath>FBrief.cpp</itemPath>
-      <itemPath>FORB.cpp</itemPath>
-      <itemPath>FSurf64.cpp</itemPath>
-      <itemPath>FeatureVector.cpp</itemPath>
-      <itemPath>QueryResults.cpp</itemPath>
-      <itemPath>ScoringObject.cpp</itemPath>
+      <itemPath>Makefile</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>src</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Файлы заголовков"
@@ -67,6 +60,7 @@
             <pElem>../../SDKs/DLib-1.0/include/DVision</pElem>
             <pElem>../../SDKs/jdk1.8.0_92/include</pElem>
             <pElem>../../SDKs/jdk1.8.0_92/include/linux</pElem>
+            <pElem>src</pElem>
           </incDir>
           <commandLine>-std=c++11</commandLine>
         </ccTool>
@@ -92,33 +86,19 @@
                             group="bin"/>
         </packFileList>
       </packaging>
-      <item path="BowVector.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="BowVector.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Column.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Column.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="DBoW2.cmake.in" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="DBoW2.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FBrief.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="FBrief.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="FClass.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="FORB.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="FORB.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="FSurf64.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="FSurf64.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FeatureVector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="FeatureVector.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -128,11 +108,9 @@
       </item>
       <item path="KeyHash.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="QueryResults.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
       </item>
       <item path="QueryResults.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ScoringObject.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ScoringObject.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -141,6 +119,8 @@
       <item path="TemplatedVocabulary.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="2">
@@ -184,33 +164,19 @@
           <commandLine>-lpqxx -lpq -lopencv_core -lopencv_contrib -lopencv_features2d -lopencv_flann -lopencv_highgui -lopencv_objdetect -lopencv_video -lopencv_legacy -lopencv_calib3d -lopencv_imgproc -lopencv_ml -lopencv_nonfree</commandLine>
         </linkerTool>
       </compileType>
-      <item path="BowVector.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="BowVector.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Column.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Column.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="DBoW2.cmake.in" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="DBoW2.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FBrief.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="FBrief.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="FClass.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="FORB.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="FORB.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="FSurf64.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="FSurf64.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FeatureVector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="FeatureVector.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -220,11 +186,9 @@
       </item>
       <item path="KeyHash.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="QueryResults.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
       </item>
       <item path="QueryResults.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ScoringObject.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ScoringObject.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -233,6 +197,8 @@
       <item path="TemplatedVocabulary.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
