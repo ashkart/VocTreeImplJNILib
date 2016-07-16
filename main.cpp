@@ -45,6 +45,7 @@ using namespace pqxx;
 
 static connection *pg_conn;
 static Surf64Database *db;
+Surf64Vocabulary *voc;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -120,6 +121,24 @@ void getFeatures(vector<vector<vector<float> > > &features, string &imageDir,
 
 
 extern "C" JNIEXPORT void JNICALL 
+Java_org_ash_VocPgWrapper_createVocTree(JNIEnv *env, jobject obj, 
+        jstring imageDir, jstring vocName, jint branchNum, jint depth)
+{
+    const char *nImageDir = env->GetStringUTFChars(imageDir, 0);
+    const char *nVocName = env->GetStringUTFChars(vocName, 0);
+
+    Surf64Vocabulary newVoc((string)nVocName, branchNum, depth);
+    if (voc) {
+        delete *voc;
+        voc = nullptr;
+    }
+    voc = &newVoc;
+    
+    env->ReleaseStringUTFChars(imageDir, nImageDir);
+    env->ReleaseStringUTFChars(vocName, nVocName);
+}
+
+extern "C" JNIEXPORT void JNICALL 
 Java_org_ash_VocPgWrapper_loadFeaturesToDB(JNIEnv *env, jobject obj,
 jstring imageDir, jstring newRecordName, int NIMAGES, 
         bool EXTENDED_SURF = false)
@@ -162,6 +181,22 @@ jstring imageDir, jstring newRecordName, int NIMAGES,
     
     env->ReleaseStringUTFChars(imageDir, nImageDir);
     env->ReleaseStringUTFChars(newRecordName, nNewRecordName);
+}
+
+extern "C" JNIEXPORT void JNICALL 
+Java_org_ash_VocPgWrapper_createDB(JNIEnv *env, jobject obj, jstring dbName)
+{
+    if (!voc) {
+        cerr << "create a vocabulary first with createVocTree()" << endl;
+    }
+    const char *nDbName = env->GetStringUTFChars(dbName, 0);
+    Surf64Database newDb((string)nDbName, *voc, false);
+    if (db) {
+        delete db;
+        db = nullptr;
+    }
+    db = &newDb;
+    env->ReleaseStringUTFChars(dbName, nDbName);
 }
 
 extern "C" JNIEXPORT jstring JNICALL 
